@@ -2,6 +2,7 @@ import React, { Fragment, useRef, useEffect } from "react"
 import "./logo.style.scss"
 import { TweenMax, Power3 } from "gsap/all"
 
+
 const LogoComponent = (props) => {
   let logoItem = useRef(null)
   let text = useRef(null)
@@ -25,7 +26,7 @@ const LogoComponent = (props) => {
 
   return (
     <Fragment>
-      <svg ref={logoItem}
+      <svg ref={el => logoItem = el}
            className={"logo "} viewBox="0 0 1172 334" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <g transform="matrix(1,0,0,1,-654.574,-1683.01)">
 
@@ -98,7 +99,7 @@ const LogoComponent = (props) => {
         </g>
 
       </svg>
-      <p ref={text} className="sub-title">Web Developer in Japan</p>
+      <p ref={el => text = el} className="sub-title">Web Developer in Japan</p>
     </Fragment>
   )
 }

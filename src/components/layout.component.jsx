@@ -4,6 +4,7 @@ import { TimelineMax, Power3 } from "gsap/all"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Image from "gatsby-image"
+import CSSPlugin from 'gsap/CSSPlugin';
 
 
 import "./layout.style.scss"
@@ -43,6 +44,7 @@ const Layout = ({ children }) => {
 
 
   useEffect(() => {
+    const C = CSSPlugin;  // here is the gotcha....
 
     const tl = new TimelineMax()
     tl.to(cardItem, 0.4, {x: -75, opacity: 1, ease: Power3.easeIn})
@@ -64,7 +66,7 @@ const Layout = ({ children }) => {
         <div>
 
         </div>
-        <BackgroundImage ref={cardItem} style={{ backgroundSize: "cover" }}
+        <BackgroundImage ref={el => cardItem = el} style={{ backgroundSize: "cover" }}
                          className="card"
                          fluid={data.cardJson.img.childImageSharp.fluid}>
           <h1 ref={el => titleItem = el}>ようこそ</h1>
@@ -72,7 +74,7 @@ const Layout = ({ children }) => {
 
 
         </BackgroundImage>
-        <div ref={scrollItem} className="scroll">Scroll Down
+        <div ref={el => scrollItem= el} className="scroll">Scroll Down
           <Image className="icon" fluid={data.cardJson.icon.childImageSharp.fluid}/>
         </div>
       </header>
