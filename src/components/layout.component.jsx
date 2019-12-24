@@ -39,6 +39,9 @@ const Layout = ({ children }) => {
   let titleItem = useRef(null)
   let cardItem = useRef(null)
   let cardDescription = useRef(null)
+
+
+
   useEffect(() => {
 
     const tl = new TimelineMax()
@@ -61,7 +64,7 @@ const Layout = ({ children }) => {
         <div>
 
         </div>
-        <BackgroundImage ref={el=> {cardItem = el}} style={{ backgroundSize: "cover" }}
+        <BackgroundImage ref={cardItem} style={{ backgroundSize: "cover" }}
                          className="card"
                          fluid={data.cardJson.img.childImageSharp.fluid}>
           <h1 ref={el => titleItem = el}>ようこそ</h1>
@@ -69,7 +72,7 @@ const Layout = ({ children }) => {
 
 
         </BackgroundImage>
-        <div ref={el => scrollItem = el} className="scroll">Scroll Down
+        <div ref={scrollItem} className="scroll">Scroll Down
           <Image className="icon" fluid={data.cardJson.icon.childImageSharp.fluid}/>
         </div>
       </header>
