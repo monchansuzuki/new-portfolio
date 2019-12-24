@@ -2,8 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout.component"
 import ProjectPreview from "../components/project-preview/project-preview.component"
-import {TweenMax, TimelineMax} from "gsap"
-import { Helmet } from "react-helmet"
+
 
 
 const IndexPage = () => {

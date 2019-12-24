@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from "react"
 import PropTypes from "prop-types"
-import ScrollMagic from "scrollmagic"
 import { TimelineMax, Power3 } from "gsap"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
