@@ -1,21 +1,56 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import Layout from "../components/layout.component"
+import ProjectPreview from "../components/project-preview/project-preview.component"
+import {TweenMax, TimelineMax} from "gsap"
+import { Helmet } from "react-helmet"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  // const projects = data.allProjectsJson.edges;
+
+   const data = useStaticQuery(graphql`
+
+      query {
+          allProjectsJson {
+              edges {
+                  node {
+                      title
+                      url
+                      slug
+                      description
+                      image {
+                          publicURL
+                          childImageSharp{
+                              fluid {
+                                  ...GatsbyImageSharpFluid
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+          
+      }
+
+  `)
+  return (
+
+    <Layout>
+      {data.allProjectsJson.edges.map( (project, index) => {
+        const title = project.node.title;
+        const slug = project.node.slug;
+        const description = project.node.description;
+        const img = project.node.image.childImageSharp.fluid
+        return (
+          <ProjectPreview fluid={img} key={index} title={title} description={description} slug={slug}/>
+        )
+      })}
+
+    </Layout>
+  )
+}
 
 export default IndexPage
+
+

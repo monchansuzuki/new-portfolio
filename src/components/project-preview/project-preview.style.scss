@@ -1,0 +1,146 @@
+h2 {
+  color: #ececec;
+  text-align: center;
+  font-size: 3em;
+  margin: 1em 0;
+  font-family: "Nanum Myeongjo", serif;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 2em;
+
+  }
+}
+
+
+section:nth-child(even) {
+  padding: 6em 8px;;
+  height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+
+  .item-container {
+    display: flex;
+    flex-direction: row-reverse;
+    @media only screen and (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .card-item {
+    display: flex;
+    justify-content: space-around;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      align-items: center;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 8px;
+
+
+  }
+}
+
+section:nth-child(odd) {
+  padding: 6em 8px;;
+  height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+
+  .item-container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 15%;
+    @media only screen and (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: auto;
+    }
+  }
+
+  .card-item {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      align-items: center;
+
+
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    width: auto;
+    padding: 16px 8px;
+
+
+  }
+}
+
+.link {
+  color: #3066fe;
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+
+  @media only screen and (max-width: 600px) {
+    writing-mode: horizontal-tb;
+
+  }
+
+}
+
+.description-pro {
+  margin: 0 16px;
+  font-size: 2em;
+  text-orientation: upright;
+  writing-mode: vertical-rl;
+  height: 60%;
+
+  @media only screen and (max-width: 600px) {
+    margin: 16px 8px;
+    writing-mode: horizontal-tb;
+    font-size: 1.3em;
+    height: auto;
+
+  }
+}
+
+.img-container {
+  width: 70vw;
+  margin: 0 18px;
+  @media only screen and (max-width: 600px) {
+    width: 80%;
+  }
+}
+
+
+
+
+

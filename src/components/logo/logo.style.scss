@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet');
+.sub-title {
+  font-family: "Nanum Myeongjo", serif;
+  color: white;
+  font-size: 0.8em;
+}
+.logo{
+  width: 12em;
+  @media (max-width:576px){
+    width: 8em;
+  }
+}
+.letter {
+  fill: none;
+  stroke: white;
+  stroke-width: 22.85px;
+}
+
+.letter-fill {
+  fill-rule: nonzero;
+}
+
+.let-in-1 {
+  animation: letter-animation 0.7s forwards;
+}
+
+.let-in-2 {
+  animation: letter-animation 0.7s 1s forwards;
+}
+
+.let-in-3 {
+  animation: letter-animation 0.7s 1.5s forwards;
+}
+
+.let-in-4 {
+  animation: letter-animation 0.7s 2s forwards;
+}
+
+.let-in-5 {
+  animation: letter-animation 0.7s 2.5s forwards;
+}
+
+.let-in-6 {
+  animation: letter-animation 0.7s 3s forwards;
+}
+
+.clip-2 {
+  stroke-width: 20px !important;
+  stroke: white;
+  stroke-dasharray: 2600;
+  stroke-dashoffset: 2600;
+  animation: sym-animation-in 2.5s ease-in forwards;
+}
+
+.clip-2-symbol {
+  stroke-width: 22.85px;
+  fill: rgba(255, 255, 255, 0);
+  animation: letter-animation 2.5s 3.5s linear infinite alternate-reverse;
+}
+
+.rec {
+  stroke-dasharray: 2600;
+  stroke-dashoffset: 2600;
+  stroke-width: 4.17px;
+  fill: white;
+  animation: rec-animation-in 3.5s ease-in;
+}
+@keyframes letter-animation {
+  0% {
+    fill: rgba(255, 255, 255, 0);
+  }
+  100% {
+    fill: white;
+  }
+}
+@keyframes rec-animation-in {
+  0% {
+    stroke: white;
+    fill: none;
+  }
+  80% {
+    stroke: white;
+    stroke-dashoffset: 0;
+    fill: rgba(255, 255, 255, 0);
+  }
+  100% {
+    fill: white;
+  }
+}
+@keyframes sym-animation-in {
+  0% {
+    stroke: white;
+    fill: none;
+  }
+  100% {
+    stroke: white;
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+/*# sourceMappingURL=logo.style.css.map */
