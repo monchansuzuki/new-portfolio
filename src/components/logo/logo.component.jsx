@@ -1,12 +1,13 @@
 import React, { Fragment, useRef, useEffect } from "react"
 import "./logo.style.scss"
-import { TweenMax, Power3 } from "gsap/all"
+import { TweenMax, Power3, CSSPlugin } from "gsap/all"
 
 
 const LogoComponent = (props) => {
   let logoItem = useRef(null)
   let text = useRef(null)
 
+  const plugin = CSSPlugin;
 
 
   useEffect(() => {

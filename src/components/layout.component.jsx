@@ -1,17 +1,16 @@
 import React, { useRef, useEffect } from "react"
 import PropTypes from "prop-types"
-import { TimelineMax, Power3 } from "gsap/all"
+import { TimelineMax, Power3,CSSPlugin } from "gsap/all"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Image from "gatsby-image"
-import CSSPlugin from 'gsap/CSSPlugin';
 
 
 import "./layout.style.scss"
 import LogoComponent from "./logo/logo.component"
 
 const Layout = ({ children }) => {
-
+const plugin = CSSPlugin;
 
   const data = useStaticQuery(graphql`
       query {
