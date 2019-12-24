@@ -1,6 +1,6 @@
 import React, { Fragment, useRef, useEffect } from "react"
 import "./logo.style.scss"
-import { TweenMax, Power3 } from "gsap"
+import { TweenMax, Power3 } from "gsap/all"
 
 const LogoComponent = (props) => {
   let logoItem = useRef(null)

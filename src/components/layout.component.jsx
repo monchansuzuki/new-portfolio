@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react"
 import PropTypes from "prop-types"
-import { TimelineMax, Power3 } from "gsap"
+import { TimelineMax, Power3 } from "gsap/all"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Image from "gatsby-image"
