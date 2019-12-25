@@ -9,7 +9,7 @@ import { TimelineMax,TweenMax, Power3} from "gsap"
 
 
 
-const ProjectPreviewComponent = ({ title, description, slug, fluid }) => {
+const ProjectPreviewComponent = ({ title, description, slug, fluid ,tag}) => {
 
   let scrollStart = useRef(null)
   let titleItem = useRef(null)
@@ -27,6 +27,9 @@ const ProjectPreviewComponent = ({ title, description, slug, fluid }) => {
   return (
     <section ref={el => scrollStart = el}>
       <h2 ref={el => titleItem = el}>{title}</h2>
+      <div className="badge-container">
+        {tag.map( (data, i) => <span className="badge" key={i}>{data}</span>)}
+      </div>
       <div className="card-item">
 
         <div className="img-container">

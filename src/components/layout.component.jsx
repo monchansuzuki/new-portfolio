@@ -32,7 +32,18 @@ const plugin = CSSPlugin;
                       }
                   }
               }
-          } }
+          }
+
+          bgJson {
+              img {
+                  childImageSharp {
+                      fluid {
+                          ...GatsbyImageSharpFluid
+                      }
+                  }
+              }
+          }
+      }
   `)
   console.log(data)
   let scrollItem = useRef(null)
@@ -60,7 +71,7 @@ const plugin = CSSPlugin;
 
   return (
     <div className="container">
-      <header>
+      <BackgroundImage className="bg" fluid={data.bgJson.img.childImageSharp.fluid}>
         <LogoComponent/>
         <div>
 
@@ -76,7 +87,7 @@ const plugin = CSSPlugin;
         <div ref={el => scrollItem= el} className="scroll">Scroll Down
           <Image className="icon" fluid={data.cardJson.icon.childImageSharp.fluid}/>
         </div>
-      </header>
+      </BackgroundImage>
       <main>{children}</main>
 
     </div>

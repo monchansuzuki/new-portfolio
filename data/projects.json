@@ -4,49 +4,57 @@
     "slug": "https://career.jopus.net/",
     "url": "https://career.jopus.net/",
     "image": "./images/IMG_1.png",
-    "description": "外国人採用専門のスタッフが内定までしっかりサポート！"
+    "description": "外国人採用専門のスタッフが内定までしっかりサポート！",
+    "tag": ["Angular", "AWS", "Java Play", "Materialize", "Sass"]
   },
   {
     "title": "Jopus Scout business",
     "slug": "https://scout-business.jopus.net/",
     "url": "https://scout-business.jopus.net/",
     "image": "./images/IMG_2.png",
-    "description": "日本在住＋日本語が話せる外国人特化のスカウトサービス。"
+    "description": "日本在住＋日本語が話せる外国人特化のスカウトサービス。",
+    "tag": ["Angular", "AWS", "Java Play", "Materialize","Sass"]
+
   },
   {
     "title": "Jopus IT",
     "slug": "https://career.jopus.net/it",
     "url": "https://career.jopus.net/it",
     "image": "./images/IMG_3.png",
-    "description": "日本のIT企業からスカウトが来る、エンジニアのためのサービスです。"
+    "description": "日本のIT企業からスカウトが来る、エンジニアのためのサービスです。",
+    "tag": ["GatsbyJs", "Materialize", "Sass"]
   },
   {
     "title": "Jopus Portal Management",
-    "slug": "project-4",
+    "slug": "http://jopus-scout-test.s3-website-ap-northeast-1.amazonaws.com/portal-management/login",
     "url": "https://career.jopus.net/",
     "image": "./images/IMG_4.png",
-    "description": "既にサービスや商品を認知されている顧客に対し、購買を促す施策をサポート。"
+    "description": "既にサービスや商品を認知されている顧客に対し、購買を促す施策をサポート。",
+    "tag": ["Angular", "Ngrx", "Java Play", "ChartJs"]
   },
   {
     "title": "ゴーリスト新卒",
     "slug": "https://fresh-recruiting.goalist.co.jp/",
     "url": "https://fresh-recruiting.goalist.co.jp/",
     "image": "./images/IMG_5.png",
-    "description": "ゴーリスト新卒ウエブサイト。"
+    "description": "ゴーリスト新卒ウェブサイト。",
+    "tag": ["Hugo", "AWS", "Sass", "Materialize"]
   },
   {
     "title": "日本語で話そう",
     "slug": "https://lets-talk-japanese.web.app/",
     "url": "https://lets-talk-japanese.web.app/",
     "image": "./images/IMG_6.png",
-    "description": "日本語勉強中の方、ぜひ遊んでみてくださいね.あなたの日本語はどのレベル？"
+    "description": "日本語勉強中の方、ぜひ遊んでみてくださいね.あなたの日本語はどのレベル？",
+    "tag": ["Vuejs", "FireBase"]
   },
   {
-    "title": "Roman Danna",
+    "title": "Romain Danna",
     "slug": "https://romain-danna-v2.netlify.com/",
     "url": "https://romain-danna-v2.netlify.com/",
     "image": "./images/IMG_7.png",
-    "description": "日本に住んでるモデルのポートフォリオ。"
+    "description": "日本在住モデルのポートフォリオ。",
+    "tag": ["React", "Netify", "Sass", "Materialize"]
   }
 ]
 

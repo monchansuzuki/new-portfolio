@@ -12,7 +12,7 @@ p{
   width: 100vw;
 }
 
-header{
+.bg{
   padding: 40px;
   height: 100vh;
 }
@@ -43,7 +43,8 @@ header{
 
 .card {
   height: 60vh;
-  width: 60%!important;
+  margin-left: 30%;
+  width: 65%!important;
 
   background-position: right!important;
   margin-top: 16px;
@@ -53,6 +54,7 @@ header{
 
   @media only screen and (max-width: 600px) {
     width: 100% !important;
+    margin-left: auto;
 
   }
 
