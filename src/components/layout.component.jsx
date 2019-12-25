@@ -37,8 +37,23 @@ const plugin = CSSPlugin;
           bgJson {
               img {
                   childImageSharp {
-                      fluid {
+                      fluid (duotone: {
+                          highlight: "#2d4387",
+                          shadow: "#000000",
+                      },
+                          rotate: 180
+                      ){
                           ...GatsbyImageSharpFluid
+                      }
+                  }
+              }
+          }
+
+          allIconJson {
+              edges {
+                  node {
+                      socialIcon {
+                          publicURL
                       }
                   }
               }
@@ -89,6 +104,16 @@ const plugin = CSSPlugin;
         </div>
       </BackgroundImage>
       <main>{children}</main>
+
+
+      <footer>
+        <LogoComponent/>
+        <div className="flex">
+          {data.allIconJson.edges[0].node.socialIcon.map((el, i) => {
+            return (<a href=""key={i}><img className="icon-s"  src={el.publicURL} alt=""/></a>)
+          })}
+        </div>
+      </footer>
 
     </div>
   )

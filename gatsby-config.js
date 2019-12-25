@@ -19,7 +19,14 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-netlify`
+    `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-scroll-indicator`,
+      options: {
+        // Configure color of the scroll indicator
+        color: '#ffbb00'
+      }
+    }
 
   ],
 }
